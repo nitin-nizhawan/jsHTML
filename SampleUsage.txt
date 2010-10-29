@@ -1,0 +1,33 @@
+Let's say we want to create following html
+<div class="button" id="main">
+    <table border="0">
+       <tr>
+           <td>Username</td><td><input type="text" /></td>
+       </tr>
+       <tr>
+           <td>Password</td><td><input type="password" /></td>
+       </tr>
+    </table>
+</div>
+
+similar html can be created using this lib in javascript
+$($tn('BODY')[0],,[
+    $($ce('DIV'),{'class':'button','id':'main'},[
+        $($ce('TABLE'),{'border':'0'},[
+            $($ce('TR'),,[
+                $($ce('TD'),,[
+                    'Username',
+                    $($ce('INPUT'),{'type':'text'})
+                ]),
+                $($ce('TD'),,[
+                    'Password',
+                    $($ce('INPUT'),{'type':'password'})
+                ])
+            ]),
+            $($ce('TR'),,[
+            ])
+        ])
+    ])
+]);
+
+
